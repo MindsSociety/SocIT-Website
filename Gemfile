@@ -29,6 +29,15 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Loads environment variables from `.env`.
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', :groups => [:development, :test]
+
+# Mail Chimp API
+# http://developer.mailchimp.com/documentation/mailchimp/guides/get-started-with-mailchimp-api-3/
+# https://rubygems.org/gems/mailchimp-api/versions/2.0.6
+gem 'mailchimp-api', '~> 2.0', '>= 2.0.6'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
