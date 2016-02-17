@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @newsletter.id %>
+</p>
+
+<p>
+  <strong>Create time:</strong>
+  <%= @newsletter.create_time %>
+</p>
+
+<p>
+  <strong>Subject line:</strong>
+  <%= @newsletter.subject_line %>
+</p>
+
+<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
+<%= link_to 'Back', newsletters_path %>
