@@ -29,6 +29,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# Used for AWS Elastic Beanstalk
+gem 'puma'
+
 # Loads environment variables from `.env`.
 # https://github.com/bkeepers/dotenv
 gem 'dotenv-rails', :groups => [:development, :test]
