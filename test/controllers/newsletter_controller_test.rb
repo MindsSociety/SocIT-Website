@@ -1,13 +1,8 @@
 require 'test_helper'
 
 class NewsletterControllerTest < ActionController::TestCase
-  test "should get get_campaigns" do
-    get :get_campaigns
-    assert_response :success
-  end
-
-  test "should get get_campaign" do
-    get :get_campaign
+  test "should get index" do
+    get :index
     assert_response :success
   end
 
