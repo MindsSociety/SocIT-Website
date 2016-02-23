@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'calendar',                to: 'calendar#index'
+  get 'contribute',              to: 'contribute#index'
+  get 'irc',                     to: 'irc#index'
+  get 'newsletter',              to: 'newsletter#index'
+  get 'newsletter/:campaign_id', to: 'newsletter#get_campaign'
+
   resources :users
 
   get 'welcome/index'

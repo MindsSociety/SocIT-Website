@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20151002210530) do
     t.boolean  "email_opt_in",    default: false
     t.boolean  "home_directory",  default: false
     t.string   "profile_picture"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
