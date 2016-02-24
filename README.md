@@ -28,37 +28,27 @@ Install the [brew package manager](http://brew.sh):
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install ruby
+gem install rails
 ```
 
-Follow the Linux instructions but use `brew` rather than `apt-get`
+If you haven't already, make sure to install git and a few other useful tools:
+
+```sh
+brew install git curl wget
+```
 
 ### Linux
-
-#### Ubuntu <= 14.04
-If you have Ubuntu 14.04 or below, you will need to manually install ruby
-`2.2`, if your package manager has ruby `2.2` feel free to skip this step.
+This is the easy one
 
 ```
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --rails
 ```
 
-#### Ubuntu >= 14.04 and other Linux distros
--   Ubuntu
+**Note 0:** You may need to enter your password a few times during the installation.
 
-    ```sh
-    sudo apt-get install ruby
-    gem install rails
-    ```
-
--   Mac OSX
-
-    ```sh
-    brew install ruby
-    gem install rails
-    ```
-
-- Otherwise, use your system's package manager; i.e. `pacman`, `yum` or whatever.
+**Note 1:** If the install fails when installing gem native extensions you may
+need to install `make`. On Arch Linux I used `pacman -S base-devel`
 
 ## Fork the repo
 Fork the repo on GitHub <https://github.com/MindsSociety/Website#fork-destination-box>
