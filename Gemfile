@@ -59,6 +59,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 
+  gem 'irbtools'
+
   # Pretty print your Ruby objects with style -- in full color and with proper
   # indentation http://github.com/michaeldv/awesome_print
   gem 'awesome_print'
