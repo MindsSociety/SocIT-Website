@@ -56,7 +56,9 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
+  # Improvements for Ruby's IRB console http://irb.tools
   gem 'irbtools'
+  gem 'irbtools-more', require: 'irbtools/binding'
 
   # Pretty print your Ruby objects with style -- in full color and with proper
   # indentation http://github.com/michaeldv/awesome_print

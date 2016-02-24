@@ -41,6 +41,7 @@ GEM
     binding.repl (3.0.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bond (0.5.1)
     builder (3.2.2)
     byebug (8.2.2)
     cd (1.0.1)
@@ -62,6 +63,7 @@ GEM
     debugging (1.1.0)
       binding.repl (~> 3.0)
       paint (>= 0.9, < 2.0)
+    did_you_mean (1.0.0)
     dotenv (2.1.0)
     dotenv-rails (2.1.0)
       dotenv (= 2.1.0)
@@ -102,6 +104,11 @@ GEM
       ruby_info (~> 1.0)
       ruby_version (~> 1.0)
       wirb (~> 2.0)
+    irbtools-more (2.1.0)
+      binding_of_caller (~> 0.7)
+      bond (~> 0.5)
+      did_you_mean (~> 1.0)
+      irbtools (~> 2.0)
     jbuilder (2.4.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -230,6 +237,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   dotenv-rails
   irbtools
+  irbtools-more
   jbuilder (~> 2.0)
   jquery-rails
   less-rails-bootstrap
