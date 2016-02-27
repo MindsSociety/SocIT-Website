@@ -3,7 +3,7 @@ require 'mailchimp'
 require 'mailchimp/errors'
 
 module NewsletterHelper
-  class MailchimpHelper
+  class MailchimpWrapper
     attr_accessor :mailchimp
 
     def initialize
@@ -23,7 +23,7 @@ module NewsletterHelper
   end
 
   # Fakechimp is used when a valid Mailchimp API Key can not be found
-  class FakechimpHelper
+  class FakechimpWrapper
     def get_campaign_html(campaign_id)
       File.read 'data/fake-data/mailchimp-campaigns-BigUpdate-content.html'
     end

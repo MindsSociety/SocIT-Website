@@ -1,5 +1,5 @@
 <%# Warning if the mailchimp api key is not found, not visible in production. %>
-<% if @mailchimp.class == NewsletterHelper::FakechimpHelper %>
+<% if @mailchimp.class == NewsletterHelper::FakechimpWrapper %>
   <% if Rails.env.production? %>
     <div class="row-fluid">
       <div class="col-sm-12">

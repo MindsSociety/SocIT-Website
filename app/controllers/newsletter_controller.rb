@@ -3,10 +3,10 @@ class NewsletterController < ApplicationController
 
   def initialize
     begin
-      @mailchimp = NewsletterHelper::MailchimpHelper.new
+      @mailchimp = NewsletterHelper::MailchimpWrapper.new
     rescue Mailchimp::Error => e
       Rails.logger.error e.message
-      @mailchimp = NewsletterHelper::FakechimpHelper.new
+      @mailchimp = NewsletterHelper::FakechimpWrapper.new
     end
 
     super
