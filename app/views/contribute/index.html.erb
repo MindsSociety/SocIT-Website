@@ -12,37 +12,66 @@
 
 <div class="row-fluid">
   <div class="col-sm-10">
-    <h3 id="git-involved">Git Involved</h3>
-    <ul>
-      <li>Fork the <a href="https://github.com/MindsSociety/Website">git repo</a>
+    <div class="row-fluid">
+      <div class="col-sm-12">
+        <h3 id="git-involved">Git Involved</h3>
+        <p>
+        Fork the <%= link_to 'git repo', 'https://github.com/MindsSociety/Website' %> and send us
+   a pull request.
+        </p>
+   
+        <p>
+        If you're new to git and GitHub, we've laid out some simple instructions
+   over on our <%= link_to 'Git Setup', '/contribute/git' %>
+        </p>
+      </div>
+    </div>
+   
+    <div class="row-fluid">
+      <div class="col-sm-12">
+        <h3>Environment setup</h3>
+        <p>
+        We have ommitted the some private production environment variables like
+        api keys and the rails secret key.
+        These can be found in our private Repo, committee members and website
+        contributors should have access to this. Contact the committee for access to
+        these, in the mean time, you may need to spoof these to get the website up
+        and running.
+        </p>
+       
+        <p>
+        For the most part, this app should be good to go without setting any environment
+        variables as we provide fake data for any API calls.
+        </p>
+       
+        <p>
+        If you want to test the site in a production environment you will need to set the
+        following:
+        </p>
+       
+        <pre>
+        export RAILS_ENV=production
+        export SECRET_KEY_BASE=$(rake secret)
+        </pre>
+      </div>
+    </div>
+   
+    <div class="row-fluid">
+      <div class="col-sm-1">
+     
+      </div>
+    </div>
+   
+   <div class="row-fluid">
+     <div class="col-sm-2">
+       <h3>Ruby on Rails</h3>
         <ul>
-          <li><a href="https://github.com/MindsSociety/Website" class="uri">https://github.com/MindsSociety/Website</a></li>
-          <li>Send a pull request</li>
+          <li><%= link_to "Ruby",         "https://www.ruby-lang.org/en/" %></li>
+          <li><%= link_to "Rails",        "http://rubyonrails.org" %></li>
+          <li><%= link_to "Rails Guide",  "http://guides.rubyonrails.org" %></li>
         </ul>
-        <li>Ask for access to the Website Team</li>
-    </ul>
-
-    <p>
-    <strong>Note</strong>: There are a few files we have omitted for security.
-    <ul>
-      <li><code>Website.env</code> - Contains API keys</li>
-      <li>See <code>.gitignore</code> for full list</li>
-    </ul>
-    </p>
-
-    <p>
-    These files can be found in our private Repo, committee members and website
-    contributors should have access to this. Contact the committee for access to
-    these, in the mean time, you may need to spoof these to get the website up
-    and running
-    </p>
-
-    <h3>Ruby on Rails</h3>
-    <ul>
-      <li><%= link_to "Ruby",         "https://www.ruby-lang.org/en/" %></li>
-      <li><%= link_to "Rails",        "http://rubyonrails.org" %></li>
-      <li><%= link_to "Rails Guide",  "http://guides.rubyonrails.org" %></li>
-    </ul>
+      </div>
+    </div>
   </div>
 </div>
 
