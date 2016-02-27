@@ -31,9 +31,10 @@
 
           <%# See: app/helpers/application_helper.rb %>
           <%= nav_bar do %>
-            <%= nav_link "News",             "/newsletter" %>
-            <%= nav_link "Events Calendar",  "/calendar" %>
-            <%= nav_link "IRC",              "/irc" %>
+            <%= nav_link "News",            newsletter_path %>
+            <%= nav_link "Events Calendar", calendar_path %>
+            <%= nav_link "IRC",             irc_path %>
+            <%= nav_link "Contribute",      contribute_path %>
           <% end %>
 
           <%# Navbar right align %>
