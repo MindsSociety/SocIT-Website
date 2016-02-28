@@ -18,7 +18,7 @@
 /public/assets/
 
 # Secrets
-Website.env
+.env
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*

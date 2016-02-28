@@ -8,7 +8,7 @@ own machines when they are set up.
 Feel free to fork this website and use it for whatever. 
 
 **Note**: There are a few files we have omitted for security.
-- `Website.env` - Contains API keys
+- `.env` - Contains API keys
 
 These files can be found in our private Repo, committee members and website
 contributors should have access to this. Contact the committee for access to

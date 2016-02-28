@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Loads environment variables from `.env`.
+# https://github.com/bkeepers/dotenv
+gem 'dotenv-rails', require: 'dotenv/rails-now'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -30,10 +34,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Used for AWS Elastic Beanstalk
 gem 'puma'
-
-# Loads environment variables from `.env`.
-# https://github.com/bkeepers/dotenv
-gem 'dotenv-rails', :groups => [:development, :test]
 
 # Ruby toolkit for the GitHub API http://octokit.github.io/octokit.rb/
 gem "octokit", "~> 4.0"
