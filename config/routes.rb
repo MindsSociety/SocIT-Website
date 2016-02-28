@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   get 'calendar',                to: 'calendar#index'
   get 'contribute',              to: 'contribute#index'
   get 'contribute/git',          to: 'contribute#git'
-  get 'contribute/ruby',         to: 'contribute#ruby'
   get 'irc',                     to: 'irc#index'
   get 'newsletter',              to: 'newsletter#index'
   get 'newsletter/:campaign_id', to: 'newsletter#get_campaign'
