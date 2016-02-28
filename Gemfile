@@ -35,6 +35,9 @@ gem 'puma'
 # https://github.com/bkeepers/dotenv
 gem 'dotenv-rails', :groups => [:development, :test]
 
+# Ruby toolkit for the GitHub API http://octokit.github.io/octokit.rb/
+gem "octokit", "~> 4.0"
+
 # Mail Chimp API
 # http://developer.mailchimp.com/documentation/mailchimp/guides/get-started-with-mailchimp-api-3/
 # https://rubygems.org/gems/mailchimp-api/versions/2.0.6
