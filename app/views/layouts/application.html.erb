@@ -18,7 +18,7 @@
         <div class="navbar-header">
 
           <%# Menu button for mobile devices %>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <%# The three bars in the menu button %>
             <span class="icon-bar"></span>
@@ -30,7 +30,7 @@
         </div>
 
         <%# Navbar left align %>
-        <div class="collapse navbar-collapse">
+        <div class="collapse navbar-collapse" id="navbar-main-collapse">
 
           <%# See: app/helpers/application_helper.rb %>
           <%= nav_bar do %>
@@ -42,17 +42,10 @@
 
           <%# Navbar right align %>
           <ul class="nav navbar-nav navbar-right">
+            <% unless Rails.env.production? %>
+              <li><div class="alert alert-success" role="alert"><%= Rails.env %></div></li>
+            <% end %>
             <li><%= link_to "Sign Up", "/users/new" %></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
           </ul>
         </div>
     </nav>
