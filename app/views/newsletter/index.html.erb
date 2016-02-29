@@ -3,7 +3,8 @@
   <% if Rails.env.production? %>
     <div class="row-fluid">
       <div class="col-sm-12">
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning alert-dismissible" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <strong>Error:</strong> No valid Mailchimp API Key found, please contact
           a committee member at <%= mail_to "minds@nuimsu.com" %>.
         </div>
@@ -20,40 +21,32 @@
   <% end %>
 <% end %>
 
-<div class="row-fluid">
-  <div class="col-sm-12">
-    <h1>News</h1>
+<div class="row">
+  <%# Left aligned list of campaigns. %>
+  <div class="hidden-xs col-sm-3 col-md-2">
+    <h3>Archive</h3>
+    <ul class="nav nav-pills nav-stacked">
+      <% @campaign_list.each do |campaign| %>
+        <li role="presentation"><%= link_to campaign['title'], "/newsletter/#{campaign['id']}" %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <%# Centered articles %>
+  <div class="col-xs-12 col-sm-9 col-md-10">
+    <h3>News</h3>
+    <h4>What needs to be done</h4>
+    <ul>
+      <li><strong>Done</strong> Integration with <%= link_to "Mailchimp API", "http://developer.mailchimp.com/documentation/mailchimp/?utm_source=apidocs&utm_medium=internal_ad&utm_campaign=api_v3" %></li>
+      <li>Sign up button</li>
+      <li>Nicer looking sider bar</li>
+      <li>Campaign list for mobile devices - I have no idea what to do with this</li>
+      <li>Display latest campaign</li>
+      <li><strong>Done</strong> Display a list of most recent campaigns</li>
+      <ul>
+        <li>Can be accomplished with a GET campaigns/campaign_id</li>
+        <li>Still need to link to the emails and implement <code>newletter_controller#get_campaign</code>
+      </ul>
+    </ul>
   </div>
 </div>
-
-<section id="newsletter">
-  <div class="row-fluid">
-
-    <%# Left aligned list of campaigns. %>
-    <div class="hidden-xs col-sm-3">
-      <h3>Archive</h3>
-      <ul class="list-group">
-        <% @campaign_list.each do |campaign| %>
-          <li class="list-group-item"><%= link_to campaign['title'], "/newsletter/#{campaign['id']}" %></li>
-        <% end %>
-      </ul>
-    </div>
-
-    <%# Centered articles %>
-    <div class="col-xs-12 col-sm-9">
-      <h3>What needs to be done</h3>
-      <ul>
-        <li>Integration with <%= link_to "Mailchimp API", "http://developer.mailchimp.com/documentation/mailchimp/?utm_source=apidocs&utm_medium=internal_ad&utm_campaign=api_v3" %></li>
-        <li>Sign up button</li>
-        <li>Nicer looking sider bar</li>
-        <li>Campaign list for mobile devices - I have no idea what to do with this</li>
-        <li>Display latest Campaign</li>
-        <li><strong>Done</strong>Display a list of most recent campaigns</li>
-        <ul>
-          <li>Can be accomplished with a GET campaigns/campaign_id</li>
-          <li>Still need to link to the emails and implement <code>newletter_controller#get_campaign</code>
-        </ul>
-      </ul>
-    </div>
-  </div>
-</section>

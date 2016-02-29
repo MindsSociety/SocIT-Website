@@ -11,7 +11,19 @@ module NewsletterHelper
     end
 
     def get_campaign_html(campaign_id)
-      @mailchimp.campaigns.content(campaign_id)['html']
+      begin
+        @mailchimp.campaigns.content(campaign_id)['html']
+      rescue
+        nil
+      end
+    end
+
+    def get_campaign_title(campaign_id)
+      begin
+        @mailchimp.campaigns.list(campaign_id: campaign_id)['data'].first['title']
+      rescue
+        nil
+      end
     end
 
     # Returns an array of emails sent
@@ -26,6 +38,10 @@ module NewsletterHelper
   class FakechimpWrapper
     def get_campaign_html(campaign_id)
       File.read 'data/fake-data/mailchimp-campaigns-BigUpdate-content.html'
+    end
+
+    def get_campaign_title(campaign_id)
+      'The Big Update!'
     end
 
     # Returns an array of emails sent

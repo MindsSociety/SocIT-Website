@@ -17,6 +17,8 @@ class NewsletterController < ApplicationController
   end
 
   def get_campaign
-    # get params[:campaign_id]
+    @campaign_list    = @mailchimp.get_campaign_list
+    @campaign_content = @mailchimp.get_campaign_html  params[:campaign_id]
+    @campaign_title   = @mailchimp.get_campaign_title params[:campaign_id]
   end
 end
