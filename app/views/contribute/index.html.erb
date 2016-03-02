@@ -4,8 +4,8 @@
 
     <h4 id="link-box">Links</h4>
     <ul class="list-unstyled">
-      <li><%= link_to 'GitHub',         'https://github.com/MindsSociety/Website' %></li>
-      <li><%= link_to 'GitHub Issues',  'https://github.com/MindsSociety/Website' %></li>
+      <li><%= link_to 'GitHub',         'https://github.com/MindsSociety/Compsoc-Website' %></li>
+      <li><%= link_to 'GitHub Issues',  'https://github.com/MindsSociety/Compsoc-Website/issues' %></li>
       <li><%= link_to "Ruby",           'https://www.ruby-lang.org/en/' %></li>
       <li><%= link_to "Rails",          'http://rubyonrails.org' %></li>
       <li><%= link_to "Rails Guide",    'http://guides.rubyonrails.org' %></li>
@@ -28,8 +28,121 @@
 
         <p>
         If you're new to git and GitHub, we've laid out some simple
-        instructions over on our <%= link_to 'Git Setup', '/contribute/git' %>
-        page.
+        instructions below.
+        </p>
+
+        <div class="panel-group" id="git-panel" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="git-panel-heading">
+              <a role="button" data-toggle="collapse" data-parent="#git-panel" href="#git-panel-body" aria-expanded="true" aria-controls="collapseOne">
+                <h5 class="panel-title">
+                  Git setup instructions
+                </h5>
+              </a>
+            </div>
+
+            <div id="git-panel-body" class="panel-collapse collapse" role="tabpanel" aria-labelledby="git-panel-heading">
+              <div class="panel-body">
+                <h4>Fork the repository</h4>
+                <p>
+                Fork the repository to your own GitHub. This will create a copy
+                of this repository on your account, you will be able make
+                changes and submit a pull request when you're done.
+                </p>
+
+                <h4>Cloning vs Forking</h4>
+                <p>
+                <strong>Cloning</strong> is a feature of <em>git</em> that
+                allows us to download a copy, (<em>clone</em>), of a repository
+                to a machine. From there you can do whatever you like to the
+                code without affecting the source repository.
+                </p>
+
+                <p>
+                <strong>Forking</strong> is a feature of
+                <strong>GitHub</strong> that will copy the repository to your
+                GitHub account. Since you own this repository you can make
+                changes and push them to your fork. If you would like to push
+                your changes to the original repository you can submit a
+                <em>pull request</em>.
+                </p>
+
+                <p>
+                For more info, take a look at this Stack Overflow answer:
+                <%= link_to 'http://stackoverflow.com/a/6286877','http://stackoverflow.com/a/6286877' %>.
+                </p>
+
+                <h4>Clone your fork</h4>
+                <p>and install the project <em>gems</em>.</p>
+                <pre><code class="bash">git clone https://github.com/[Your GitHub Username]/Compsoc-Website.git
+cd Compsoc-Website
+bundle install</code></pre>
+
+                <h4>Make some changes!</h4>
+                <p>Go ahead, have fun.</p>
+
+                <h4>Update the project <small>pull from remote branch</small></h4>
+                <p>
+                If there has been changes made to the compsoc repository that are
+                not in your fork, you will need to pull those changes down to
+                your machine.
+                </p>
+
+                <p>
+                First you will need to set up a remote repository. You will
+                only need to do this once.
+                </p>
+
+                <pre><code class="bash">git remote add compsoc-origin https://github.com/MindsSociety/Compsoc-Website.git</code></pre>
+
+                <p>
+                <strong>Tip:</strong> you can see a list of your remote
+                repositories using <code class="bash">git remote -v</code>
+                </p>
+
+                <p>Anytime you want to update the repository, simply run:</p>
+
+                <pre><code class="bash">git fetch
+git pull compsoc-origin</code></pre>
+
+                <h4>Submitting a Pull Request</h4>
+                <p>
+                A pull request is a request to add your code into the
+                CompSoc-Website repository. Your request will be reviewed by
+                one of the members of the Website-Team. If you've made a few
+                pull-requests, you'll probably be added to the Website-Team.
+                </p>
+
+                <p>
+                This can be done on the GitHub website, GitHub has written a
+                pretty good guide here:
+                <%= link_to 'help.github.com/articles/using-pull-requests', 'https://help.github.com/articles/using-pull-requests' %>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h4 id="where-to-start">Where to start</h4>
+        <p>
+        This website is still pretty early in development, so feel free to pick
+        a page and work on it. Many pages still have a "What needs to be done"
+        section. Our goal is to get rid of them!
+        </p>
+
+        <p>
+        If you have an idea for a new page or service you want on the site, go
+        ahead and make it, we are welcome to new ideas.
+        </p>
+
+        <p>
+        If you have an idea for a page but don't quite have the time or
+        know how to implement it, make a new issue on our <%= link_to 'GitHub',
+        'https://github.com/MindsSociety/Compsoc-Website/issues' %>.
         </p>
       </div>
     </div>
@@ -80,7 +193,11 @@ curl -sSL https://get.rvm.io | bash -s stable --rails</code></pre>
                 a few times during the installation.
                 </p>
 
-                <p>Clone the repo and install the necessary gems:</p>
+                <p>Fork the repo and install the necessary gems:</p>
+
+                <pre><code class="bash">git clone https://github.com/[Your GitHub Username]/Compsoc-Website.git
+cd Compsoc-Website
+bundle install</code></pre>
 
               </div>
 
@@ -94,6 +211,12 @@ gem install rails</code></pre>
                 <p>If you haven't already, make sure to install git and a few other useful tools:</p>
 
                 <pre><code class="bash">brew install git curl wget</code></pre>
+
+                <p>Fork the repo and install the necessary gems:</p>
+
+                <pre><code class="bash">git clone https://github.com/[Your GitHub Username]/Compsoc-Website.git
+cd Compsoc-Website
+bundle install</code></pre>
               </div>
 
               <!-- Windows -->
