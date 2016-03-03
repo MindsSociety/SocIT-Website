@@ -1,22 +1,6 @@
-<!-- Left Column -->
-<div class="row-fluid">
-  <div class="col-sm-3 col-md-2">
-
-    <h4 id="link-box">Links</h4>
-    <ul class="list-unstyled">
-      <li><%= link_to 'GitHub',         'https://github.com/MindsSociety/Compsoc-Website' %></li>
-      <li><%= link_to 'GitHub Issues',  'https://github.com/MindsSociety/Compsoc-Website/issues' %></li>
-      <li><%= link_to "Ruby",           'https://www.ruby-lang.org/en/' %></li>
-      <li><%= link_to "Rails",          'http://rubyonrails.org' %></li>
-      <li><%= link_to "Rails Guide",    'http://guides.rubyonrails.org' %></li>
-      <li><%= link_to 'Codecademy',     'https://www.codecademy.com/learn/learn-rails' %></li>
-    </ul>
-  </div>
-</div>
-
-<!-- Right Column -->
-<div class="row-fluid">
-  <div class="col-sm-9 col-md-10">
+<div class="row">
+  <!-- Right Column -->
+  <main class="col-sm-9 col-md-10 col-sm-push-3 col-sm-push-2">
     <h3 id="get-involved">Get Involved</h3>
     <div class="row">
       <div class="col-sm-12">
@@ -262,5 +246,43 @@ export RAILS_SERVE_STATIC_FILES=true
 rake assets:precompile</code></pre>
       </div>
     </div>
-  </div>
+  </main>
+
+  <!-- Left Column -->
+  <aside class="col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10">
+    <h3 id="link-box">Links</h3>
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>GitHub</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to 'GitHub',             'https://github.com/MindsSociety/Compsoc-Website' %></li>
+          <li><%= link_to 'GitHub Issues',      'https://github.com/MindsSociety/Compsoc-Website/issues' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>Ruby</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to 'Ruby',               'https://www.ruby-lang.org/en/' %></li>
+          <li><%= link_to 'Rails',              'http://rubyonrails.org' %></li>
+          <li><%= link_to 'Rails Guide',        'http://guides.rubyonrails.org' %></li>
+          <li><%= link_to 'Codecademy',         'https://www.codecademy.com/learn/learn-rails' %></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <h4>APIs used</h4>
+        <ul class="list-unstyled">
+          <li><%= link_to 'GitHub Octokit',     'https://github.com/octokit/octokit.rb' %></li>
+          <li><%= link_to 'Mailchimp API',      'https://bitbucket.org/mailchimp/mailchimp-api-ruby' %></li>
+          <li><%= link_to 'Twitter Bootstrap',  'http://getbootstrap.com' %></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
 </div>

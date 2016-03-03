@@ -1,13 +1,32 @@
-<h1>IRC</h1>
-<h3>What needs to be done</h3>
-<ul>
-  <li>Connect to the Minds server - either Frustration or the new box</li>
-  <li>Connect to an instance of IRC running (probably) in a docker container</li>
-  <li>Connect to the <strong>Intersocs IRC</strong> (ask Karl)</li>
-  <li>Web viewer for the IRC</li>
-  <ul>
-    <li>Automatic sign in to IRC if signed into the site</li>
-    <li>Assuming we get that up and running</li>
-    <li>There's probably a gem for that</li>
-  </ul>
-</ul>
+<div class="row">
+
+  <!-- Centre Column -->
+  <main class="col-xs-12 col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
+    <h3 id="irc">IRC</h3>
+    <div class="row">
+      <div class="col-xs-12">
+        <% if Rails.env.production? %>
+          <p>IRC is coming soon&trade;
+        <% else %>
+          <h4>What needs to be done</h4>
+          <ul>
+            <li>Connect to the Minds server - either Frustration or the new box</li>
+            <li>Connect to an instance of IRC running (probably) in a docker container</li>
+            <li>Connect to the <strong>Intersocs IRC</strong> (ask Karl)</li>
+            <li>Web viewer for the IRC</li>
+            <ul>
+              <li>Automatic sign in to IRC if signed into the site</li>
+              <li>Assuming we get that up and running</li>
+              <li>There's probably a gem for that</li>
+            </ul>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <!-- Left Column -->
+  <aside class="hidden-xs col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10">
+    <%= render partial: "side_bar" %>
+  </aside>
+</div>

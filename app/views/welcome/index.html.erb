@@ -8,7 +8,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="row-fluid">
+<div class="row">
 
   <!-- Centre Column -->
   <main class="col-sm-5 col-md-7 col-sm-push-3 col-md-push-2">
@@ -27,42 +27,7 @@
 
   <!-- Left Column -->
   <aside class="col-sm-3 col-md-2 col-sm-pull-5 col-md-pull-7">
-    <h3>Info</h3>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <h4 id="link-box">Links</h4>
-        <ul class="list-unstyled">
-          <li><%= link_to 'Facebook', 'https://www.facebook.com/groups/MINDSMaynooth/' %></li>
-          <li><%= link_to 'GitHub', 'https://github.com/MindsSociety/Compsoc-Website' %></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <h4 id="meetings">Meetings</h4>
-        <ul class="list-unstyled">
-          <li>Thursdays: 19:00 - 21:30</li>
-          <li>CB1, Callan building</li>
-          <li>Maynooth University</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <h4 id="contact">Contact</h4>
-        <p><%= mail_to 'minds@nuimsu.com' %></p>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-xs-12">
-        <h4 id="mailing-list">Mailing List</h4>
-        <p><%= link_to 'Sign up here', '/users/new' %></p>
-      </div>
-    </div>
+    <%= render partial: "side_bar" %>
   </aside>
 
   <!-- Right Column -->

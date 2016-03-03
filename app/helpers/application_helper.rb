@@ -1,5 +1,16 @@
 module ApplicationHelper
 
+  # Bootstrap style alerts
+  def alert(alert_level)
+    content_tag :div, class: ['alert', "alert-#{alert_level}", 'alert-dismissible'], role: 'alert' do
+      button = content_tag :button, type: 'button', class: 'close', 'data-dismiss': 'alert', 'aria-label': 'Close' do
+        content_tag :span, sanitize('&times;'), 'aria-hidden': 'true'
+      end
+      concat button
+      yield
+    end
+  end
+
   # Bootstrap navbar
   def nav_bar
     content_tag :nav, class: "nav navbar-nav" do

@@ -1,7 +1,27 @@
-<h1>Events Calendar</h1>
-<h3>What needs to be done</h3>
-<ul>
-  <li>Sync with our Google calendar</li>
-  <li>Use the <%= link_to "Google API", "https://developers.google.com/google-apps/calendar/" %></li>
-  <li>Look pretty</li>
-</ul>
+<div class="row">
+
+  <!-- Centre Column -->
+  <main class="col-xs-12 col-sm-9 col-md-10 col-sm-push-3 col-md-push-2">
+    <h3 id="irc">Events Calendar</h3>
+    <div class="row">
+      <div class="col-xs-12">
+        <% if Rails.env.production? %>
+          <p>Events Calendar is coming soon&trade;
+          <!-- Dump calendar here -->
+        <% else %>
+          <h4>What needs to be done</h4>
+          <ul>
+            <li>Sync with our Google calendar</li>
+            <li>Use the <%= link_to "Google API", "https://developers.google.com/google-apps/calendar/" %></li>
+            <li>Look pretty</li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </main>
+
+  <!-- Left Column -->
+  <aside class="hidden-xs col-sm-3 col-md-2 col-sm-pull-9 col-md-pull-10">
+    <%= render partial: "side_bar" %>
+  </aside>
+</div>

@@ -1,57 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>MU Compsoc</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
+<head>
+  <title>MU Compsoc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
 
-          <%# Menu button for mobile devices %>
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <%# The three bars in the menu button %>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+      <%# Menu button for mobile devices %>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-main-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <%# The three bars in the menu button %>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
 
-          <%= link_to "MU Compsoc", "/", class: "navbar-brand" %>
-        </div>
-
-        <%# Navbar left align %>
-        <div class="collapse navbar-collapse" id="navbar-main-collapse">
-
-          <%# See: app/helpers/application_helper.rb %>
-          <%= nav_bar do %>
-            <%= nav_link "News",            newsletter_path %>
-            <%= nav_link "Events Calendar", calendar_path %>
-            <%= nav_link "IRC",             irc_path %>
-            <%= nav_link "Contribute",      contribute_path %>
-          <% end %>
-
-          <%# Navbar right align %>
-          <ul class="nav navbar-nav navbar-right">
-            <% unless Rails.env.production? %>
-              <li><div class="alert alert-success" role="alert"><%= Rails.env %></div></li>
-            <% end %>
-            <li><%= link_to "Sign Up", "/users/new" %></li>
-          </ul>
-        </div>
-    </nav>
-
-    <div class="container">
-      <%= yield %>
+      <!-- Tag the navbar with a environment label -->
+      <%= link_to "/", class: "navbar-brand" do %>
+        <% if Rails.env.production? %>
+          <%= "MU Compsoc" %>
+        <% else %>
+          <%= 'MU Compsoc' %> <span class="label label-success"><%= Rails.env %></span> 
+        <% end %>
+      <% end %>
     </div>
-  </body>
+
+    <%# Navbar left align %>
+    <div class="collapse navbar-collapse" id="navbar-main-collapse">
+
+      <%# See: app/helpers/application_helper.rb %>
+      <%= nav_bar do %>
+        <%= nav_link "News",            newsletter_path %>
+        <%= nav_link "Events Calendar", calendar_path %>
+        <%= nav_link "IRC",             irc_path %>
+        <%= nav_link "Contribute",      contribute_path %>
+      <% end %>
+
+      <%# Navbar right align %>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "Sign Up", "/users/new" %></li>
+      </ul>
+    </div>
+</nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+</body>
 </html>
+
