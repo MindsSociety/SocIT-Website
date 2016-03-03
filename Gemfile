@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Used for AWS Elastic Beanstalk
 gem 'puma'
 
+# A minimal wrapper around the Google Calendar API http://northworld.github.io/google_calendar
+gem 'google_calendar'
+
 # Ruby toolkit for the GitHub API http://octokit.github.io/octokit.rb/
 gem "octokit", "~> 4.0"
 
