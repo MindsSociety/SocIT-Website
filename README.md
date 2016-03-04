@@ -1,6 +1,6 @@
 # CompSoc Website
 
-## [compsoc.maynoothuniversity.ie](http://rails-compsoc-env.es7mszu33e.eu-west-1.elasticbeanstalk.com/)
+## [compsoc.maynoothuniversity.ie](http://compsoc.maynoothuniversity.ie)
 Currently hosted on an AWS Elastic Beanstalk instance but will be hosted on our
 own machines when they are set up.
 
@@ -69,10 +69,5 @@ for access.
 In the mean time, enjoy these fake environment values.
 
 ```sh
-export RAILS_SERVE_STATIC_FILES=true
 export SECRET_KEY_BASE=$(rake secret)
 ```
-
-**Caveat**: We can't give out our Mailchimp API Key so it wont be possible to
-work on the News page if you don't have it. I may generate some fake data in
-the future.
