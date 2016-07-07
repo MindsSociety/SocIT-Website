@@ -10,12 +10,6 @@ gem 'rails', '4.2.3'
 gem 'sqlite3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-
-# Using Twitter bootsrap
-gem 'therubyracer'
-gem 'less-rails-bootstrap'
-gem "twitter-bootstrap-rails"
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -34,6 +28,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Used for AWS Elastic Beanstalk
 gem 'puma'
+
+# Bootstrap
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 # A minimal wrapper around the Google Calendar API http://northworld.github.io/google_calendar
 gem 'google_calendar'
@@ -65,5 +63,8 @@ group :development do
   # Pretty print your Ruby objects with style -- in full color and with proper
   # indentation http://github.com/michaeldv/awesome_print
   gem 'awesome_print'
+
+  # Improvements for Ruby's IRB console http://irb.tools
+  gem 'irbtools', :require => 'irbtools/configure'
 end
 
