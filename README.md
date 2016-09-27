@@ -1,11 +1,11 @@
-# CompSoc Website
+# SocIT Website
 
-## [compsoc.maynoothuniversity.ie](http://compsoc.maynoothuniversity.ie)
+## [socit.maynoothuniversity.ie](http://socit.maynoothuniversity.ie)
 Currently hosted on an AWS Elastic Beanstalk instance but will be hosted on our
 own machines when they are set up.
 
 ## Contributing/Forking
-Feel free to fork this website and use it for whatever. 
+Feel free to fork this website and use it for whatever.
 
 **Note**: There are a few files we have omitted for security.
 - `.env` - Contains API keys
@@ -25,7 +25,7 @@ ruby is installed by default but you may want a new version:
 
 Install the [brew package manager](http://brew.sh):
 
-```
+```sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install ruby
 gem install rails
@@ -55,8 +55,8 @@ need to install `make`. On Arch Linux I used `pacman -S base-devel`
 Fork the repo on GitHub <https://github.com/MindsSociety/Website#fork-destination-box>
 
 ```sh
-git clone https://github.com/<Your_username>/Compsoc-Website.git
-cd Compsoc-Website
+git clone https://github.com/<Your_username>/SocIT-Website.git
+cd SocIT-Website
 bundle install      # May take a while
 rake db:migrate
 ```
