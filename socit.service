@@ -1,0 +1,14 @@
+[Unit]
+Description=SocIT
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/rayman/Website
+ExecStart=/home/rayman/Website/bin/pumactl start
+ExecReload=/home/rayman/Website/bin/pumactl restart
+ExecStop=/home/rayman/Website/bin/pumactl stop
+EnvironmentFile=/home/rayman/Website/.env
+
+[Install]
+WantedBy=multi-user.target
