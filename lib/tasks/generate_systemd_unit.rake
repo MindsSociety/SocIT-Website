@@ -12,7 +12,8 @@ task generate_systemd_unit: :environment do
     
     f.puts %Q{[Unit]
 Description=#{Rails.application.class.parent_name}
-After=network.target
+Requires=nginx.target
+After=network.target nginx.target
 
 [Service]
 Type=simple

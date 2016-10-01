@@ -1,6 +1,7 @@
 [Unit]
 Description=SocIT
-After=network.target
+Requires=nginx.service
+After=network.target nginx.service
 
 [Service]
 Type=simple
@@ -9,6 +10,7 @@ ExecStart=/home/rayman/Website/bin/pumactl start
 ExecReload=/home/rayman/Website/bin/pumactl restart
 ExecStop=/home/rayman/Website/bin/pumactl stop
 EnvironmentFile=/home/rayman/Website/.env
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
