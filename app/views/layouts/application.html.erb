@@ -30,10 +30,10 @@
       <!-- Tag the navbar with a environment label -->
       <%= link_to "/", class: "navbar-brand" do %>
         <% if Rails.env.production? %>
-          <%= image_tag 'socit.png' %>
+          <%= image_tag 'socit.png', id: 'socit-logo' %>
         <% else %>
           <%= image_tag 'socit.png', id: 'socit-logo' %>
-        <!-- <span class="label label&#45;success"><%= Rails.env %></span>  -->
+          <span class="label label&#45;success"><%= Rails.env %></span> 
         <% end %>
       <% end %>
     </div>
