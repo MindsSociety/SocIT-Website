@@ -17,6 +17,7 @@ Gemfile.lock
 !/log/.keep
 /tmp
 /public/assets/
+/bin
 
 # Secrets
 .env
