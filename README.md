@@ -1,6 +1,6 @@
 # SocIT Website
 
-## [socit.maynoothuniversity.ie](http://socit.maynoothuniversity.ie)
+## [socit.maynoothuniversity.ie](https://socit.maynoothuniversity.ie)
 Currently hosted on an AWS Elastic Beanstalk instance but will be hosted on our
 own machines when they are set up.
 

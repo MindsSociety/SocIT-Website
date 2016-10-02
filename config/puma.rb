@@ -1,8 +1,6 @@
 rails_env = 'production'
 environment rails_env
-port ENV.fetch("PORT", 80)
 
-# daemonize
 pidfile "#{Dir.pwd}/tmp/pids/puma.pid"
 state_path "#{Dir.pwd}/tmp/pids/puma.pid.state"
 
@@ -10,7 +8,7 @@ state_path "#{Dir.pwd}/tmp/pids/puma.pid.state"
 workers 8
 threads 0, 16
 
-# bind "unix://#{Dir.pwd}/tmp/sockets/puma.sock"
+bind "unix://#{Dir.pwd}/tmp/sockets/puma.sock"
 
 activate_control_app
 
