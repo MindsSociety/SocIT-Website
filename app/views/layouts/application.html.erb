@@ -10,11 +10,12 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= render 'favicon' %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <nav class="navbar navbar-default">
-  <div class="container">
+  <div class="container-fluid">
     <div class="navbar-header">
 
       <%# Menu button for mobile devices %>
@@ -29,9 +30,10 @@
       <!-- Tag the navbar with a environment label -->
       <%= link_to "/", class: "navbar-brand" do %>
         <% if Rails.env.production? %>
-          <%= "SocIT" %>
+          <%= image_tag 'socit.png' %>
         <% else %>
-          <%= 'SocIT' %> <span class="label label-success"><%= Rails.env %></span> 
+          <%= image_tag 'socit.png', id: 'socit-logo' %>
+        <!-- <span class="label label&#45;success"><%= Rails.env %></span>  -->
         <% end %>
       <% end %>
     </div>
@@ -48,8 +50,8 @@
       <% end %>
 
       <%# Navbar right align %>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sign Up", "/users/new" %></li>
+      <ul class="nav navbar-nav navbar-right nav-pills">
+        <li class="active"><%= link_to "Sign Up", "/users/new" %></li>
       </ul>
     </div>
 </nav>

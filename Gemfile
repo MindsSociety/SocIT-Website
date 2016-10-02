@@ -64,6 +64,9 @@ group :development do
   # indentation http://github.com/michaeldv/awesome_print
   gem 'awesome_print'
 
+  # https://realfavicongenerator.net/favicon_result?file_id=p1au193vll14mr1l74audphirbs6&technology=ror#.V_BHKukZPqY
+  gem 'rails_real_favicon'
+
   # Improvements for Ruby's IRB console http://irb.tools
   gem 'irbtools', :require => 'irbtools/configure'
 end

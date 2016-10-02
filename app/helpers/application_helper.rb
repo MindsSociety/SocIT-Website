@@ -14,8 +14,9 @@ module ApplicationHelper
   end
 
   # Bootstrap navbar
-  def nav_bar
-    content_tag :nav, class: "nav navbar-nav" do
+  def nav_bar(options = {})
+    options[:class] = "nav navbar-nav" + options[:class].to_s
+    content_tag :nav, options do
       yield
     end
   end
