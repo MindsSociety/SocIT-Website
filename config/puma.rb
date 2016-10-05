@@ -14,6 +14,7 @@ if rails_env == 'production'
   # Change workers to match CPU core count
   workers 8
   threads 0, 16
+
   bind "unix://#{Dir.pwd}/tmp/sockets/puma.sock"
 else
   port ENV.fetch('RAILS_PORT',3000)
