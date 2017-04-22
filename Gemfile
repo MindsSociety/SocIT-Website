@@ -27,6 +27,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Used for AWS Elastic Beanstalk
 gem 'puma'
 
+# Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/devise
+# https://github.com/plataformatec/devise
+gem 'devise'
+
+gem 'omniauth'
+
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
