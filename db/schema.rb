@@ -10,19 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170410195237) do
+ActiveRecord::Schema.define(version: 20170422143401) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "username"
+    t.string   "name",                                   null: false
+    t.string   "username",                               null: false
     t.integer  "student_number"
-    t.string   "email"
     t.string   "phone_number"
     t.boolean  "email_opt_in",           default: false
     t.boolean  "home_directory",         default: false
-    t.string   "profile_picture"
-    t.datetime "created_at",                             null: false
-    t.datetime "updated_at",                             null: false
+    t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -35,10 +32,9 @@ ActiveRecord::Schema.define(version: 20170410195237) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string   "unconfirmed_email"
-    t.integer  "failed_attempts",        default: 0,     null: false
-    t.string   "unlock_token"
-    t.datetime "locked_at"
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
