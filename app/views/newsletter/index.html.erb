@@ -3,12 +3,12 @@
   <div class="row">
     <div class="col-xs-12">
       <% if Rails.env.production? %>
-        <%= alert 'danger' do %>
+        <%= bootstrap_alert 'danger' do %>
           <strong>Error:</strong> No valid Mailchimp API Key found, please contact
           a committee member at <%= mail_to "minds@nuimsu.com" %>.
         <% end %>
       <% else %>
-        <%= alert 'warning' do %>
+        <%= bootstrap_alert 'warning' do %>
           <strong>Warning:</strong> No valid Mailchimp API Key found, using
           fake data.
         <% end %>
