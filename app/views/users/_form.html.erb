@@ -1,4 +1,5 @@
 <%= form_for(@user) do |f| %>
+  <%= devise_error_messages! %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -15,34 +16,51 @@
     <%= f.label :name %><br>
     <%= f.text_field :name %>
   </div>
+  
   <div class="field">
     <%= f.label :username %><br>
     <%= f.text_field :username %>
   </div>
+
+  <div class="field">
+    <%= f.label :password, "New password" %><br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+    <% end %>
+    <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
+  </div>
+  <%= f.hidden_field :reset_password_token %>
+
+  <div class="field">
+    <%= f.label :password_confirmation, "Confirm new password" %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+
   <div class="field">
     <%= f.label :student_number %><br>
     <%= f.text_field :student_number %>
   </div>
+
   <div class="field">
     <%= f.label :email %><br>
     <%= f.text_field :email %>
   </div>
+
   <div class="field">
     <%= f.label :phone_number %><br>
     <%= f.text_field :phone_number %>
   </div>
+  
   <div class="field">
     <%= f.label :email_opt_in %><br>
     <%= f.check_box :email_opt_in %>
   </div>
+  
   <div class="field">
     <%= f.label :home_directory %><br>
     <%= f.check_box :home_directory %>
   </div>
-  <div class="field">
-    <%= f.label :profile_picture %><br>
-    <%= f.text_field :profile_picture %>
-  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>
