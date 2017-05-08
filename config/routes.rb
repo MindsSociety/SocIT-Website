@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
+
   get 'calendar',                to: 'calendar#index'
   get 'contribute',              to: 'contribute#index'
   get 'irc',                     to: 'irc#index'
