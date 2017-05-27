@@ -1,7 +1,7 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
-      t.string :name,     null: false
+      t.string :name
       t.string :username, null: false, unique: true
       t.integer :student_number
       t.string :phone_number
@@ -27,6 +27,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string   :last_sign_in_ip
 
       ## Confirmable
+      t.string   :unconfirmed_email
       t.string   :confirmation_token
       t.datetime :confirmed_at
       t.datetime :confirmation_sent_at
