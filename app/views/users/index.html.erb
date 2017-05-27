@@ -12,7 +12,6 @@
       <th>Phone number</th>
       <th>Email opt in</th>
       <th>Home directory</th>
-      <th>Profile picture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,7 +26,6 @@
         <td><%= user.phone_number %></td>
         <td><%= user.email_opt_in %></td>
         <td><%= user.home_directory %></td>
-        <td><%= user.profile_picture %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,7 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>
