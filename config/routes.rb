@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'newsletter',              to: 'newsletter#index'
   get 'newsletter/:campaign_id', to: 'newsletter#get_campaign'
 
+  devise_for :users, controllers: { registrations: 'registrations' }
   resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.

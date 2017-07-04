@@ -1,8 +1,9 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
-      t.string :name
-      t.string :username,         unique: true
+      t.string :name,     null: false
+      t.string :username, unique: true
+
       t.integer :student_number
       t.string :phone_number
       t.boolean :email_opt_in,    default: false

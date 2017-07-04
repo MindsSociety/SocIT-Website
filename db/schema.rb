@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 20170422143401) do
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "username",                               null: false
+    t.string   "name",                                   null: false
+    t.string   "username"
     t.integer  "student_number"
     t.string   "phone_number"
     t.boolean  "email_opt_in",           default: false
