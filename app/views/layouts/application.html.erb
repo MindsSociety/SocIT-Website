@@ -60,19 +60,18 @@
     </div>
 </nav>
 
-<% if notice %>
-  <%= bootstrap_alert :success do %>
-    <%= notice %></p>
-  <% end %>
-<% end %>
-
-<% if alert %>
-  <%= bootstrap_alert :danger do %>
-    <%= alert %>
-  <% end %>
-<% end %>
-
 <div class="container">
+  <% if notice %>
+    <%= bootstrap_alert :success do %>
+      <%= notice %></p>
+    <% end %>
+  <% end %>
+
+  <% if alert %>
+    <%= bootstrap_alert :danger do %>
+      <%= alert %>
+    <% end %>
+  <% end %>
   <%= yield %>
 </div>
 </body>
