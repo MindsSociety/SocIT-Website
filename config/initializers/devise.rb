@@ -111,10 +111,10 @@ Devise.setup do |config|
   # config.pepper = 'd986bb58b9f8e695ac3f8e89c70b1e5a42c54652d4ad0a8ddd64c001346937287f6bb478280275744b43f00d7486c7585a85ec0d15fe3d9ca7b2404b2be68f5e'
 
   # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
+  config.send_email_changed_notification = true
 
   # Send a notification email when the user's password is changed.
-  # config.send_password_change_notification = false
+  config.send_password_change_notification = true
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -157,7 +157,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :validatable
   # Range for password length.
-  config.password_length = 6..128
+  config.password_length = 8..128
 
   # Email regex used to validate email formats. It simply asserts that
   # one (and only one) @ exists in the given string. This is mainly
