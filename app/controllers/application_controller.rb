@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   @@allowed_parameters = [:name, :username, :student_number, :email,
-                          :phone_number, :email_opt_in, :home_directory]
+                          :phone_number, :email_opt_in, :home_directory,
+                          :password, :password_confirmation, :current_password]
 end

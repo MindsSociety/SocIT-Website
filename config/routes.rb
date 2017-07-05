@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  devise_for :users, controllers: {
-    registrations: 'users/registrations',
-    sessions: 'users/sessions'
-  }
-
   get 'calendar',                to: 'calendar#index'
   get 'contribute',              to: 'contribute#index'
   get 'irc',                     to: 'irc#index'
@@ -13,8 +8,9 @@ Rails.application.routes.draw do
   get 'newsletter/:campaign_id', to: 'newsletter#get_campaign'
 
   devise_for :users, controllers: {
-    registrations: 'registrations', 
-    omniauth_callbacks: "omniauth_callbacks"
+    omniauth_callbacks: "users/omniauth_callbacks",
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
   }
 
   resources :users, only: [:destroy, :edit, :show, :update]
