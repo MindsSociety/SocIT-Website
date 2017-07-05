@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   get 'newsletter',              to: 'newsletter#index'
   get 'newsletter/:campaign_id', to: 'newsletter#get_campaign'
 
-  devise_for :users, controllers: { registrations: 'registrations' }
+  devise_for :users, controllers: {
+    registrations: 'registrations', 
+    omniauth_callbacks: "omniauth_callbacks"
+  }
+
   resources :users, only: [:destroy, :edit, :show, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.

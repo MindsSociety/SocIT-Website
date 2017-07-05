@@ -33,6 +33,10 @@ gem 'devise'
 
 gem 'omniauth'
 
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'omniauth-google-oauth2'
+
 # Bootstrap
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
