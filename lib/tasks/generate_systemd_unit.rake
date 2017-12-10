@@ -9,20 +9,21 @@ task generate_systemd_unit: :environment do
 
   file_name = Rails.root.join("#{Rails.application.class.parent_name.downcase}.service")
   File.open file_name, "w" do |f|
-    
+
     f.puts %Q{[Unit]
 Description=#{Rails.application.class.parent_name}
-Requires=nginx.target
-After=network.target nginx.target
+After=network.target
 
 [Service]
 Type=simple
+User=#{ENV['USER']}
 WorkingDirectory=#{Rails.root}
 ExecStart=#{Rails.root}/bin/pumactl start
 ExecReload=#{Rails.root}/bin/pumactl restart
 ExecStop=#{Rails.root}/bin/pumactl stop
 #{"EnvironmentFile=#{Dir.pwd if Pathname.new('.env').exist? }/.env"}
 Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target}

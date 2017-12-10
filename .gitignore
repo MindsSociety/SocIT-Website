@@ -8,6 +8,9 @@
 /.bundle
 Gemfile.lock
 
+# Ignore generated systemd files (use rake generate_systemd_unit)
+socit.service
+
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
