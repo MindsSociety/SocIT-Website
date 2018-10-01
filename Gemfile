@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Used for AWS Elastic Beanstalk
-gem 'puma'
+gem 'puma', '<= 3.10'
 
 # Flexible authentication solution for Rails with Warden. http://blog.plataformatec.com.br/tag/devise
 # https://github.com/plataformatec/devise
