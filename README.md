@@ -57,7 +57,7 @@ Fork the repo on GitHub <https://github.com/MindsSociety/Website#fork-destinatio
 ```sh
 git clone https://github.com/<Your_username>/SocIT-Website.git
 cd SocIT-Website
-bundle install      # May take a while
+bundle install --path vendor/bundle      # May take a while
 rake db:migrate
 ```
 
